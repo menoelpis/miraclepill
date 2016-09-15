@@ -31,7 +31,7 @@
                                     <constraint firstAttribute="width" constant="154" id="wtt-Xp-Ack"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$150" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekj-w7-pED">
@@ -48,24 +48,45 @@
                                     <constraint firstAttribute="height" constant="1" id="JGg-ZO-gWb"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SIA-si-lTl">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FULL NAME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qvf-8y-5xs">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="a5E-gR-2tS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="SIA-si-lTl" firstAttribute="trailing" secondItem="Qvf-8y-5xs" secondAttribute="trailing" id="0yd-1x-lRU"/>
+                            <constraint firstItem="Qvf-8y-5xs" firstAttribute="leading" secondItem="VIa-WV-PK4" secondAttribute="leading" id="6mk-bw-9GG"/>
                             <constraint firstItem="4Xs-T9-Ync" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="22" id="8wG-RT-CSd"/>
+                            <constraint firstItem="SIA-si-lTl" firstAttribute="leading" secondItem="Qvf-8y-5xs" secondAttribute="leading" id="F6k-bY-HUZ"/>
+                            <constraint firstItem="SIA-si-lTl" firstAttribute="top" secondItem="Qvf-8y-5xs" secondAttribute="bottom" constant="8" id="KEJ-qf-gVH"/>
                             <constraint firstItem="4Xs-T9-Ync" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ODg-bt-ixV"/>
                             <constraint firstItem="VIa-WV-PK4" firstAttribute="top" secondItem="Ekj-w7-pED" secondAttribute="bottom" constant="8" symbolic="YES" id="aJh-Q6-eg9"/>
                             <constraint firstItem="q2V-Dd-tuO" firstAttribute="top" secondItem="4Xs-T9-Ync" secondAttribute="bottom" constant="25" id="bb3-sV-T3z"/>
+                            <constraint firstItem="Qvf-8y-5xs" firstAttribute="top" secondItem="VIa-WV-PK4" secondAttribute="bottom" constant="15" id="btX-6L-W5i"/>
                             <constraint firstItem="Ekj-w7-pED" firstAttribute="top" secondItem="q2V-Dd-tuO" secondAttribute="bottom" constant="8" symbolic="YES" id="dv9-kZ-xoc"/>
                             <constraint firstItem="q2V-Dd-tuO" firstAttribute="centerX" secondItem="4Xs-T9-Ync" secondAttribute="centerX" id="lfK-Kl-t7E"/>
+                            <constraint firstItem="SIA-si-lTl" firstAttribute="top" secondItem="Qvf-8y-5xs" secondAttribute="bottom" constant="8" id="m2v-lL-q1t"/>
                             <constraint firstItem="VIa-WV-PK4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="o0j-S9-ZQ4"/>
+                            <constraint firstItem="SIA-si-lTl" firstAttribute="top" secondItem="Qvf-8y-5xs" secondAttribute="bottom" constant="8" id="r6P-Ca-xgL"/>
                             <constraint firstItem="Ekj-w7-pED" firstAttribute="centerX" secondItem="VIa-WV-PK4" secondAttribute="centerX" id="tjL-8x-tv6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VIa-WV-PK4" secondAttribute="trailing" constant="20" id="v74-W2-lMh"/>
+                            <constraint firstItem="Qvf-8y-5xs" firstAttribute="trailing" secondItem="VIa-WV-PK4" secondAttribute="trailing" id="yqI-dR-QeJ"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
+            <point key="canvasLocation" x="24.637681159420293" y="35.054347826086961"/>
         </scene>
     </scenes>
     <resources>
