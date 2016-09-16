@@ -120,6 +120,13 @@
                                     <constraint firstAttribute="height" constant="147" id="ngc-7w-hGv"/>
                                 </constraints>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h11-1K-9Ph">
+                                <state key="normal" title="Button" image="buyNowBtn"/>
+                                <connections>
+                                    <action selector="buyNowBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5z0-Jm-mum"/>
+                                    <segue destination="5g2-cj-PuO" kind="show" id="pZH-Ai-5Tz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -133,7 +140,9 @@
                             <constraint firstItem="SIA-si-lTl" firstAttribute="leading" secondItem="Qvf-8y-5xs" secondAttribute="leading" id="F6k-bY-HUZ"/>
                             <constraint firstItem="jfr-7Z-BeG" firstAttribute="top" secondItem="AUf-JY-Cd7" secondAttribute="bottom" constant="8" id="I4T-o1-bgL"/>
                             <constraint firstItem="SIA-si-lTl" firstAttribute="top" secondItem="Qvf-8y-5xs" secondAttribute="bottom" constant="8" id="KEJ-qf-gVH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="h11-1K-9Ph" secondAttribute="trailing" constant="105" id="NrM-2g-MdB"/>
                             <constraint firstItem="4Xs-T9-Ync" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ODg-bt-ixV"/>
+                            <constraint firstItem="h11-1K-9Ph" firstAttribute="top" secondItem="jfr-7Z-BeG" secondAttribute="bottom" constant="8" id="Txa-pB-Uv5"/>
                             <constraint firstItem="H0u-xo-CwE" firstAttribute="top" secondItem="5f6-xi-fbr" secondAttribute="bottom" constant="8" id="UYN-Kr-SOW"/>
                             <constraint firstItem="WTp-E9-zmG" firstAttribute="leading" secondItem="Xsg-c0-Na3" secondAttribute="leading" id="W4J-DH-cKD"/>
                             <constraint firstItem="WTp-E9-zmG" firstAttribute="trailing" secondItem="Xsg-c0-Na3" secondAttribute="trailing" id="XWa-fm-BAs"/>
@@ -148,6 +157,7 @@
                             <constraint firstItem="Xsg-c0-Na3" firstAttribute="leading" secondItem="SIA-si-lTl" secondAttribute="leading" id="iu5-qo-Yn4"/>
                             <constraint firstItem="oiP-7I-R9r" firstAttribute="trailing" secondItem="WTp-E9-zmG" secondAttribute="trailing" id="jhe-LY-cQu"/>
                             <constraint firstItem="oiP-7I-R9r" firstAttribute="top" secondItem="WTp-E9-zmG" secondAttribute="bottom" constant="8" id="l9J-IL-10d"/>
+                            <constraint firstItem="h11-1K-9Ph" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="105" id="lLQ-Od-QDE"/>
                             <constraint firstItem="q2V-Dd-tuO" firstAttribute="centerX" secondItem="4Xs-T9-Ync" secondAttribute="centerX" id="lfK-Kl-t7E"/>
                             <constraint firstItem="VIa-WV-PK4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="o0j-S9-ZQ4"/>
                             <constraint firstItem="oiP-7I-R9r" firstAttribute="leading" secondItem="WTp-E9-zmG" secondAttribute="leading" id="rog-Lj-pzP"/>
@@ -161,32 +171,44 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buyNowButton" destination="h11-1K-9Ph" id="Cvt-yN-F1D"/>
                         <outlet property="statePicker" destination="jfr-7Z-BeG" id="iCi-sy-e0e"/>
                         <outlet property="statePickerBtn" destination="AUf-JY-Cd7" id="ADQ-SH-lqB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gqP-8d-BBD">
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="BsC-Dw-Rgn"/>
-                    </constraints>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FULL NAME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ilk-On-pgv">
-                    <constraints>
-                        <constraint firstAttribute="height" constant="21" id="a1F-V0-QEq"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </objects>
             <point key="canvasLocation" x="24.637681159420293" y="35.054347826086961"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="EOt-P0-5fj">
+            <objects>
+                <viewController id="5g2-cj-PuO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WKV-f2-ET2"/>
+                        <viewControllerLayoutGuide type="bottom" id="GmF-zN-y1E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qkw-dS-xqb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="successIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="FH3-dD-IB8"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FH3-dD-IB8" firstAttribute="centerY" secondItem="Qkw-dS-xqb" secondAttribute="centerY" id="ciD-8q-sgD"/>
+                            <constraint firstItem="FH3-dD-IB8" firstAttribute="centerX" secondItem="Qkw-dS-xqb" secondAttribute="centerX" id="lZ5-gg-goz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MbA-UO-rcK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="858" y="35"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="buyNowBtn" width="225" height="45"/>
         <image name="miraclePillEmoji" width="90" height="90"/>
+        <image name="successIndicator" width="180" height="180"/>
     </resources>
 </document>
